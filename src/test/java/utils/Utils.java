@@ -9,6 +9,12 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import pages.LoginPage;
 
 import javax.naming.ConfigurationException;
 import java.io.FileInputStream;
@@ -16,12 +22,15 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.security.GeneralSecurityException;
+import java.time.Duration;
 import java.util.Collections;
 import java.util.Properties;
 
 import static io.restassured.RestAssured.given;
 
 public class Utils {
+
+    public static String userInfo="./src/test/resources/users.json";
 
     public static Properties props;
     public static FileInputStream file;
@@ -38,6 +47,29 @@ public class Utils {
         fileWriter.write(jsonArray.toJSONString());
         fileWriter.flush();
         fileWriter.close();
+    }
+    public static void fileWrite( JSONArray jsonArray ) throws IOException {
+        FileWriter fileWriter=new FileWriter(userInfo);
+        fileWriter.write(jsonArray.toJSONString());
+        fileWriter.flush();
+        fileWriter.close();
+    }
+    public static void updatePassword(String field, String newData) throws IOException, ParseException {
+        JSONParser jsonParser=new JSONParser();
+        JSONArray jsonArray= (JSONArray) jsonParser.parse(new FileReader(userInfo));
+        JSONObject updatedUserObj = (JSONObject) jsonArray.get( jsonArray.size() -1 );
+        updatedUserObj.put(field,newData);
+
+        fileWrite(jsonArray);
+
+    }
+
+    public static void clearLoginCreds(WebDriver driver){
+        LoginPage loginPage =new LoginPage(driver);
+        loginPage.txtEmail.sendKeys(Keys.CONTROL,"a");
+        loginPage.txtEmail.sendKeys(Keys.BACK_SPACE);
+        loginPage.txtPassword.sendKeys(Keys.CONTROL,"a");
+        loginPage.txtPassword.sendKeys(Keys.BACK_SPACE);
     }
     public static   String getEmailList() throws IOException, ConfigurationException, org.apache.commons.configuration.ConfigurationException {
 

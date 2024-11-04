@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<suite name="Dailyfinance Automation with email verification">
+
+    <test name="New User Registration">
+        <classes>
+            <class name="testrunner.RegistrationTestRunner"></class>
+        </classes>
+    </test>
+
+    <test name="Reset Password">
+        <classes>
+            <class name="testrunner.ResetPasswordTestRunner"></class>
+        </classes>
+    </test>
+
+    <test name="User Dashboard">
+        <classes>
+            <class name="testrunner.UserLoginDashboardTestRunner"></class>
+        </classes>
+    </test>
+
+    <test name="User Profile">
+        <classes>
+            <class name="testrunner.UserProfileTestRunner"></class>
+        </classes>
+    </test>
+
+    <test name="Admin Dashboard">
+        <classes>
+            <class name="testrunner.AdminLoginTestRunner"></class>
+        </classes>
+    </test>
+
+</suite>
