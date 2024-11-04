@@ -41,3 +41,12 @@ This automation project covers the following main functionalities:
 ![image](https://github.com/user-attachments/assets/24d62f40-718f-4567-b364-5b648b28bad0)
 ![image](https://github.com/user-attachments/assets/0c90b7f5-d622-4649-aa22-205e423a7b0d)
 ![image](https://github.com/user-attachments/assets/daf751d9-df86-4c6d-ba27-9a098b522d35)
+
+## Additional Documentation
+
+### Test Case Report
+- **Standard Test Cases**: Comprehensive test cases with steps, expected results, and assertions are documented in an [Excel file](link-to-excel-file).
+
+### Automation Recording
+- **Full Process Recording**: A video recording of the complete automation process is available, showcasing each step and verification. You can view it [here](https://drive.google.com/drive/folders/1uFU4LxDWKB5wg2UBxcbrDBk6QerYKBsh?usp=sharing).
+
