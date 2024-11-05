@@ -45,7 +45,7 @@ This automation project covers the following main functionalities:
 ## Additional Documentation
 
 ### Test Case Report
-- **Standard Test Cases**: Comprehensive test cases with steps, expected results, and assertions are documented in an [Excel file](link-to-excel-file).
+- **Standard Test Cases**: Comprehensive test cases with steps, expected results, and assertions are documented in [here](https://docs.google.com/spreadsheets/d/199_NYv8pxo7wx9v6oL-i0kVVukd_2FjC/edit?usp=sharing&ouid=116516133926257128752&rtpof=true&sd=true).
 
 ### Automation Recording
 - **Full Process Recording**: A video recording of the complete automation process is available, showcasing each step and verification. You can view it [here](https://drive.google.com/drive/folders/1uFU4LxDWKB5wg2UBxcbrDBk6QerYKBsh?usp=sharing).
